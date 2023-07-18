@@ -20,7 +20,7 @@ export default function MessageItem(
     }
 
     return (
-        <div className="flex gap-2 items-center border shadow rounded px-2 py-1 ">
+        <div className="flex gap-2 items-center border-b rounded px-2 py-1 ">
         <div className="min-h-[30px] min-w-[30px] h-[30px] w-[30px] bg-gray-200 rounded-full overflow-hidden">
             {message.author_photo_url ? <img src={message.author_photo_url} alt="" /> : ''}
         </div>

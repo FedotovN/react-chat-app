@@ -16,14 +16,13 @@ export default function BaseButton({
             ${className ? className : ''}
             ${bgColor ? bgColor : 'bg-blue-600'}
             ${borderColor ? 'border ' + borderColor : ''}
-            ${textColor ? textColor : ''}
+            ${textColor ? textColor : 'text-gray-100'}
             px-3 py-2
             whitespace-nowrap
             text-ellipsis
             overflow-hidden
             rounded
             shadow
-            text-gray-100
             text-xs
             hover:opacity-90
             transition-all
