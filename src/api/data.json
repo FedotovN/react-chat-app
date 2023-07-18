@@ -1,0 +1,32 @@
+[
+    {
+        "author_uid": "12312312123123",
+        "body": "message",
+        "id": "0"
+    },
+    {
+        "author_uid": "12312312123123",
+        "body": "Lorem Ipsum",
+        "id": "1"
+    },
+    {
+        "author_uid": "12312312123123",
+        "body": "Bla bla",
+        "id": "2"
+    },
+    {
+        "author_uid": "12312312123123",
+        "body": "123123",
+        "id": "3"
+    },
+    {
+        "author_uid": "12312312123123",
+        "body": "message 2",
+        "id": "4"
+    },
+    {
+        "author_uid": "12312312123123",
+        "body": "message 3",
+        "id": "5"
+    }
+]
