@@ -16,18 +16,10 @@ export default function MessageForm({
         if(!message || isLoading) return
 
         setIsLoading(true)
-        const newMessage: IMessageItemProps = await new Promise((res, rej) => {
-          setTimeout(() => {
-            res({
-              author_uid: Math.random() + "",
-              body: message,
-              id: Math.random() + ''
-            })
-          }, 1000)
-        })
+        
         setIsLoading(false)
         setMessage('')
-        onNewMessage(newMessage)
+        
       }
 
     return (
