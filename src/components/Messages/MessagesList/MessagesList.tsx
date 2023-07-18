@@ -1,18 +1,16 @@
 import { useLayoutEffect, useRef } from 'react'
 import classes from "./MessagesList.module.scss"
-import IMessageItemProps from "../../../interfaces/props/IMessageItemProps"
 import MessageItem from "../MessageItem"
+import useMessages from '../../../hooks/useMessages'
 export default function MessagesList(
  {
-    messages,
     autoScroll = true,
  }: {
-    messages: IMessageItemProps[],
     autoScroll?: boolean
  }   
 ) {
   const messagesBox = useRef<HTMLDivElement>(null)
-
+  const { messages } = useMessages()
 
   useLayoutEffect(() => {
     if(messagesBox.current) {
@@ -29,17 +27,20 @@ export default function MessagesList(
       <div
       ref = { messagesBox }
       className={`
-      
       ${classes.messagesList}  flex flex-col w-full gap-2 overflow-y-scroll h-full pr-2`}>
-        {messages.map(message => {
+        {messages.length
+        ? messages.map(message => {
           return (
             <MessageItem
             key={message.id}
-            id={message.id}
-            author_uid={message.author_uid}
-            body={message.body} />
+            message={message}
+             />
           )
-        })}
+        })
+        : <div className="flex flex-col h-full w-full justify-center items-center">
+            <p className="text-gray-500 text-sm">No messages yet! Be the first one! ✍️</p>
+          </div>
+      }
       </div>
       )
 }

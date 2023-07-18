@@ -3,6 +3,7 @@ import LoginView from "./views/LoginView";
 import "./index.css"
 import { Route, Routes, Navigate } from "react-router-dom";
 import useAuth from "./hooks/useAuth";
+import BaseLoader from "./components/UI/Loader/BaseLoader";
 
 function App() {
   const { user, isLoading } = useAuth()
@@ -11,7 +12,10 @@ function App() {
     return (
       <div className="flex h-screen w-full justify-center py-2">
         <div className="flex justify-center h-full w-full px-6">
-          <p>Loading</p>
+          <div className="h-full w-full flex justify-center items-center flex-col gap-2">
+            <BaseLoader />
+            <small className="text-gray-500">Getting info...</small> 
+          </div>
         </div>
       </div>  
     )

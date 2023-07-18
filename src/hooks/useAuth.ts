@@ -23,6 +23,8 @@ export default function useAuth(
             onLogin(credentials)
         }
     }
-
-    return { user, isLoading, googleLogin }
+    const logout = async () => {
+        await FirebaseService.logOut()
+    }
+    return { user, isLoading, googleLogin, logout }
 }
