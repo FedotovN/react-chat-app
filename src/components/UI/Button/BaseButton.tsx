@@ -4,6 +4,8 @@ export default function BaseButton({
     children,
     className,
     bgColor,
+    borderColor,
+    textColor,
     onClick,
     ...props
 }: IBaseButtonProps) {
@@ -13,6 +15,8 @@ export default function BaseButton({
         className={`
             ${className ? className : ''}
             ${bgColor ? bgColor : 'bg-blue-600'}
+            ${borderColor ? 'border ' + borderColor : ''}
+            ${textColor ? textColor : ''}
             px-3 py-2
             whitespace-nowrap
             text-ellipsis
