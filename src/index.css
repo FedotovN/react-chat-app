@@ -5,3 +5,6 @@
 .scrollbar-hide::-webkit-scrollbar {
   width: 0;
 }
+.text-xxs {
+  font-size: 0.6rem;
+}

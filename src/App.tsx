@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="flex h-screen w-full justify-center py-2">
-      <div className="flex justify-center h-full w-full px-6">
+      <div className="flex justify-center h-full w-full sm:px-6 px-2">
         <Routes>
             <Route path="/" element={
               user !== null
